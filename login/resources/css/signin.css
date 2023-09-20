@@ -24,7 +24,7 @@ body {
 .form-signin {
   width: 100%;
   max-width: 500px;
-  height: 100%;
+  /* height: 100%; */
   padding: 15px;
   margin: auto;
 }
@@ -37,27 +37,32 @@ body {
   z-index: 2;
 }
 
-.form-signin input[type="text"] {
+.form-signin input {
   margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
   font-size: 20px;
+  min-height: 1rem;
+  max-height: 2.5rem;
+  border-radius: 0;
 }
 
-.form-signin input[type="password"] {
+/* .form-signin input[type="password"] {
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   font-size: 20px;
-}
+  min-height: 1rem;
+  max-height: 2.5rem;
+  border-radius: 0;
+} */
 
 #kc-header-wrapper {
   font-size: 2.90rem !important;
   visibility: hidden;
+  padding: 0px 0px 20px;
 }
 
 #kc-page-title {
-  font-size: calc(1.1rem + 1.5vw);
+  font-size: calc(1.1rem + 0.75vw);
+  text-align: center;
+  margin-top: 20px;
 }
 
 .kc-social-gray {
@@ -68,15 +73,18 @@ body {
   background-color: #282A35;
   border-color: #282A35;
   color: #ffffff;
+  border-radius: 0;
 }
 
 .button-basic:hover {
   color: #ffffff;
+  background-color: #616470;
+  border-color: #616470;
 }
 
 .login-card {
     margin: 0 auto;
-    padding: 20px 30px;
+    padding: 10px 30px;
     max-width: 100%;
     height: 100%;
     background-color: #ffffff;
@@ -112,13 +120,13 @@ body {
     }
 }
 
-/* .login-signup {
-
-} */
-
 .form-label {
     padding: 0px 0px 0px 0px !important;
     position: relative !important;
+}
+
+.form-control {
+  border-radius: 0;
 }
 
 a {
