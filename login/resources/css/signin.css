@@ -24,8 +24,7 @@ body {
 .form-signin {
   width: 100%;
   max-width: 500px;
-  /* height: 100%; */
-  padding: 15px;
+  height: 100%;
   margin: auto;
 }
 
@@ -37,21 +36,13 @@ body {
   z-index: 2;
 }
 
-.form-signin input {
+.form-signin input[type="password"], .form-signin input[type="text"] {
   margin-bottom: 10px;
   font-size: 20px;
   min-height: 1rem;
   max-height: 2.5rem;
   border-radius: 0;
 }
-
-/* .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  font-size: 20px;
-  min-height: 1rem;
-  max-height: 2.5rem;
-  border-radius: 0;
-} */
 
 #kc-header-wrapper {
   font-size: 2.90rem !important;
@@ -67,6 +58,18 @@ body {
 
 .kc-social-gray {
   color: #282A35;
+}
+
+.kc-social-section h4 {
+  font-size: calc(1rem + 0.3vw);
+}
+
+#kc-locale {
+  margin-bottom: 5px;
+}
+
+#kc-locale ul {
+  top: 10px;
 }
 
 .button-basic {
@@ -114,7 +117,7 @@ body {
 }
 
 .locale-dropdown {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     a {
       color: #282A35;
     }
@@ -134,6 +137,6 @@ a {
   text-decoration: none;
 }
 
-#kc-current-locale-link a::after {
-  visibility: hidden;
+a#kc-current-locale-link::after {
+  content: '';
 }
