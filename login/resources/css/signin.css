@@ -68,9 +68,10 @@ body {
   background-color: #282A35;
   border-color: #282A35;
   color: #ffffff;
-  :hover {
-    color: #ffffff;
-  }
+}
+
+.button-basic:hover {
+  color: #ffffff;
 }
 
 .login-card {
