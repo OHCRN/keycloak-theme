@@ -27,7 +27,6 @@ body {
   height: 100%;
   padding: 15px;
   margin: auto;
-  background-color: #ffffff;
 }
 
 .form-signin .checkbox {
@@ -57,15 +56,21 @@ body {
   visibility: hidden;
 }
 
+#kc-page-title {
+  font-size: calc(1.1rem + 1.5vw);
+}
+
+.button-basic {
+  background-color: #282A35;
+  border-color: #282A35;
+  color: #ffffff;
+}
+
 .login-card {
     margin: 0 auto;
-    /* box-shadow: var(--pf-global--BoxShadow--lg); */
-    padding: 0 20px;
+    padding: 20px 30px;
     max-width: 100%;
     height: 100%;
-    /* border-color: #0066CC; */
-    /* border-color: var(--pf-global--primary-color--100); */
-    border-radius: 25px;
 }
 
 .login-header {
@@ -77,17 +82,17 @@ body {
     color: #000000 !important;
     text-align: center;
     background: transparent no-repeat center;
-    background-image: url("../img/oicr-logo.png");
+    background-image: url("../img/oicr-logo.svg");
 }
 
-/* .locale-section {
+.locale-section {
     width: 100%;
 }
 
 .locale-dropdown {
     color: #000000 !important;
     margin-top: 10px;
-} */
+}
 
 /* .login-signup {
 
@@ -110,6 +115,6 @@ body {
     border-radius: 25px;
 }
 
-/* a {
-  color: #000000;
-} */
+a {
+  color: #2C77F6;
+}
