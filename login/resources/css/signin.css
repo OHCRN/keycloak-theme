@@ -15,10 +15,10 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* background-color: #ffffff; */
   background: url("../img/background.png") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #282A35;
 }
 
 .form-signin {
@@ -64,6 +64,9 @@ body {
   background-color: #282A35;
   border-color: #282A35;
   color: #ffffff;
+  & :hover {
+    color: #ffffff;
+  }
 }
 
 .login-card {
@@ -71,6 +74,7 @@ body {
     padding: 20px 30px;
     max-width: 100%;
     height: 100%;
+    background-color: #ffffff;
 }
 
 .login-header {
@@ -79,10 +83,18 @@ body {
     display: flex !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
-    color: #000000 !important;
     text-align: center;
     background: transparent no-repeat center;
     background-image: url("../img/oicr-logo.svg");
+}
+
+.login-info {
+  font-size: 1rem !important;
+  /* padding: 15px 137px !important; */
+  background-color: #ffffff !important;
+  margin: 10px 20px 10px;
+  font-family: inherit;
+  text-align: center;
 }
 
 .locale-section {
@@ -90,8 +102,11 @@ body {
 }
 
 .locale-dropdown {
-    color: #000000 !important;
     margin-top: 10px;
+    a {
+      text-decoration: none;
+      color: #282A35;
+    }
 }
 
 /* .login-signup {
@@ -101,18 +116,6 @@ body {
 .form-label {
     padding: 0px 0px 0px 0px !important;
     position: relative !important;
-    color: #000000;
-}
-
-.login-info {
-    background-color: #ffffff !important;
-    font-size: 20px !important;
-    padding: 15px 137px !important;
-    background-color: #ffffff !important;
-    margin: 10px 20px 10px;
-    font-family: inherit;
-    color: #000000;
-    border-radius: 25px;
 }
 
 a {
