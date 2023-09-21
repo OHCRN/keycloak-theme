@@ -79,12 +79,18 @@ body {
 #kc-locale {
   margin-bottom: 5px;
   @media screen and (max-width: 480px) {
-    top: 12px
+    top: 10px;
   }
 }
 
 #kc-locale ul {
   top: 2px;
+}
+
+#kc-locale-dropdown a {
+  @media screen and (max-width: 480px) {
+    font-size: calc(0.75rem + 0.5vw);
+  }
 }
 
 .button-basic {
