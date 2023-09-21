@@ -55,6 +55,7 @@ body {
   margin-top: 20px;
   @media screen and (max-width: 480px) {
     text-align: left;
+    font-size: calc(0.75rem + 0.5vw);
   }
 }
 
@@ -78,12 +79,12 @@ body {
 #kc-locale {
   margin-bottom: 5px;
   @media screen and (max-width: 480px) {
-    top: 15px
+    top: 12px
   }
 }
 
 #kc-locale ul {
-  top: 10px;
+  top: 2px;
 }
 
 .button-basic {
