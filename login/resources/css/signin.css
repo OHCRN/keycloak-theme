@@ -24,7 +24,7 @@ body {
 .form-signin {
   width: 100%;
   max-width: 500px;
-  height: 100%;
+  /* height: 100%; */
   margin: auto;
 }
 
@@ -54,6 +54,11 @@ body {
   font-size: calc(1.1rem + 0.75vw);
   text-align: center;
   margin-top: 20px;
+}
+
+#kc-content, #kc-content-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .kc-social-gray {
@@ -139,4 +144,16 @@ a {
 
 a#kc-current-locale-link::after {
   content: '';
+}
+
+
+/* login only */
+#kc-info {
+  margin: 20px -40px 0px;
+}
+
+/* register only */
+#kc-register-form {
+  display: flex;
+  padding-bottom: 20px;
 }
