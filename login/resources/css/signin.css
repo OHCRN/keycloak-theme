@@ -108,11 +108,6 @@ body {
     position: relative;
 }
 
-.login-card header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .login-header {
     margin-bottom: 20px;
     display: -ms-flexbox !important;
