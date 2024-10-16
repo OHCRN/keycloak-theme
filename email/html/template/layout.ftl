@@ -22,7 +22,7 @@
       line-height: 1.625;
     "
   >
-  hello testing 10:45am
+  hello testing 10:48am
     <div
       style="
         box-sizing: border-box;
@@ -31,9 +31,7 @@
         line-height: 1.625;
       "
     >
-      <@languageNotice.emailLanguageNotice>
-        ${kcSanitize(msg("languageNotice"))?no_esc}
-      </@languageNotice.emailLanguageNotice>                              
+      <@languageNotice.emailLanguageNotice />                           
 
       <#nested>
     </div>
