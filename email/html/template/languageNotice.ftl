@@ -174,7 +174,7 @@
                                             line-height: 1.5;
                                           "
                                         >
-                                          ${kcSanitize(msg("languageNotice"))?no_esc}
+                                          <#nested>
                                         </div>
                                       </td>
                                     </tr>

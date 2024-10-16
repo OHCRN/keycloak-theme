@@ -1,5 +1,5 @@
 <#import "style.ftl" as style>
-<#import "languageNotice.ftl" as text>
+<#import "languageNotice.ftl" as languageNotice>
 
 <#macro emailLayout title="">
 <!DOCTYPE html>
@@ -22,6 +22,7 @@
       line-height: 1.625;
     "
   >
+  hello testing 10:45am
     <div
       style="
         box-sizing: border-box;
@@ -30,8 +31,9 @@
         line-height: 1.625;
       "
     >
-    hello testing 10:25am
-      <@languageNotice.emailLanguageNotice />
+      <@languageNotice.emailLanguageNotice>
+        ${kcSanitize(msg("languageNotice"))?no_esc}
+      </@languageNotice.emailLanguageNotice>                              
 
       <#nested>
     </div>
