@@ -3,15 +3,14 @@
 <#import "template/layout.ftl" as layout>
 <#import "template/text.ftl" as text>
 
-<@layout.emailLayout title="Please verify your email / Verifiez votre email">
-TESTING NEW EMAIL LAYOUT
+<@layout.emailLayout title="Please verify your email / Vérifiez votre email">
   <#--  ENGLISH  -->
-  <@body.emailBody lang="en">
+  <@body.emailBody lang="en" title=kcSanitize(msg("emailVer_title_en"))?no_esc>
     ${kcSanitize(msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
   </@body.emailBody>
 
   <#--  FRENCH  -->
-  <@body.emailBody lang="fr">
+  <@body.emailBody lang="fr" title=kcSanitize(msg("emailVer_title_fr"))?no_esc>
     ${kcSanitize(msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
   </@body.emailBody>
 </@layout.emailLayout>

@@ -175,7 +175,7 @@
                                             line-height: 1.5;
                                           "
                                         >
-                                          ${kcSanitize(msg("languageNotice"))?no_esc}
+                                          ${msg("languageNotice")}
                                         </div>
                                       </td>
                                     </tr>
