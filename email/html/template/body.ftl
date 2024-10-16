@@ -3,8 +3,8 @@
 
 <#-- repeat this section for each language -->
 
-<#macro emailBody bannerImg="" lang="" title="">
-<div lang="en" style="box-sizing: border-box; font-size: 1rem; line-height: 1.625">
+<#macro emailBody title="TITLE" lang="en" helpCentre="help" contactUs="contact" sincerely="sincerely">
+<div lang="${lang}" style="box-sizing: border-box; font-size: 1rem; line-height: 1.625">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="white" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div
     style="
@@ -730,7 +730,7 @@
                                             text-align: left;
                                           "
                                         >
-                                          Sincerely,<br
+                                          ${sincerely}<br
                                             style="
                                               box-sizing: border-box;
                                               font-size: 1rem;
@@ -756,7 +756,7 @@
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
             <!-- FOOTER ICONS -->
-            <@footerIcons.emailFooterIcons />   
+            <@footerIcons.emailFooterIcons contactUs=contactUs helpCentre=helpCentre />   
             <!-- LEGAL -->
             <@footerLegal.emailFooterLegal />
           </td>
@@ -767,3 +767,16 @@
   <!--[if mso | IE]></td></tr></table><![endif]-->
 </div>
 </#macro>
+
+<#--  
+<#macro emailBody_en title>
+  <@emailBody contactUs=msg(contactUs_en)> helpCentre=msg(helpCentre_en) lang="en" sincerely=msg(sincerely_en) title=title>
+    <#nested>
+  </@emailBody>
+</#macro>
+
+<#macro emailBody_fr title>
+  <@emailBody contactUs=msg(contactUs_fr)> helpCentre=msg(helpCentre_fr) lang="fr" sincerely=msg(sincerely_fr) title=title>
+    <#nested>
+  </@emailBody>
+</#macro>  -->

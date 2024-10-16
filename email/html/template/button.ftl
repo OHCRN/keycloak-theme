@@ -1,6 +1,6 @@
 <#-- large, left-aligned green button  -->
 
-<#macro emailButton link="">
+<#macro emailButton link>
 <tr
   style="
     box-sizing: border-box;

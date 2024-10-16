@@ -1,6 +1,6 @@
 <#--  about, help, and contact icons  -->
 
-<#macro emailFooterIcons>
+<#macro emailFooterIcons contactUs helpCentre>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 <div
   style="
@@ -357,9 +357,9 @@
                                     width="180"
                                   >
                                     <img
-                                      alt
+                                      alt=""
                                       height="auto"
-                                      src="http://localhost:8087/img/ohcrn-email_help.png"
+                                      src="${properties.baseImageUrl}${properties.iconHelp}"
                                       style="
                                         box-sizing: border-box;
                                         margin: 0 auto;
@@ -419,7 +419,7 @@
                                   line-height: 1.625;
                                   font-size: 0.875rem;
                                 "
-                                >Help Centre</a
+                                >TESTING ${helpCentre}</a
                               >
                             </div>
                           </td>
@@ -613,7 +613,7 @@
                                   line-height: 1.625;
                                   font-size: 0.875rem;
                                 "
-                                >Contact Us</a
+                                >${contactUs}</a
                               >
                             </div>
                           </td>

@@ -5,12 +5,12 @@
 
 <@layout.emailLayout title="Please verify your email / Vérifiez votre email">
   <#--  ENGLISH  -->
-  <@body.emailBody lang="en" title=kcSanitize(msg("emailVer_title_en"))?no_esc>
+  <@body.emailBody title=kcSanitize(msg("emailVer_title_en"))?no_esc>
     ${kcSanitize(msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
   </@body.emailBody>
 
   <#--  FRENCH  -->
-  <@body.emailBody lang="fr" title=kcSanitize(msg("emailVer_title_fr"))?no_esc>
+  <#--  <@body.emailBody_fr title=kcSanitize(msg("emailVer_title_fr"))?no_esc>
     ${kcSanitize(msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
-  </@body.emailBody>
+  </@body.emailBody_fr>  -->
 </@layout.emailLayout>
