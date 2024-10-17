@@ -1,6 +1,6 @@
 <#-- FOOTER - copyright & terms of service  -->
 
-<#macro emailFooterLegal>
+<#macro emailFooterLegal allRightsReserved privacyPolicy termsConditions>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 <div
   style="
@@ -137,7 +137,7 @@
                                 font-size: 0.8125rem;
                               "
                             >
-                              &copy; ${properties.copyrightYear} OHCRN. All rights reserved. |
+                              &copy; ${properties.copyrightYear} ${allRightsReserved} |
                               <a
                                 href="${properties.privacyPolicyUrl}"
                                 target="_blank"
@@ -147,11 +147,11 @@
                                   font-size: 0.8125rem;
                                   color: white;
                                 "
-                                >${msg("privacyPolicy_en")}</a
+                                >${privacyPolicy}</a
                               >
                               |
                               <a
-                                href
+                                href="${properties.termsConditionsUrl}"
                                 target="_blank"
                                 style="
                                   box-sizing: border-box;
@@ -159,7 +159,7 @@
                                   font-size: 0.8125rem;
                                   color: white;
                                 "
-                                >${msg("termsConditions_en")}</a
+                                >${termsConditions}</a
                               >
                             </div>
                           </td>

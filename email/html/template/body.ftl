@@ -2,7 +2,18 @@
 <#import "footerLegal.ftl" as footerLegal>
 
 <#--  GENERIC BODY - repeat for each language  -->
-<#macro emailBody aboutOhcrn contactUs helpCentre lang sincerely title>
+<#macro emailBody 
+  aboutOhcrn
+  allRightsReserved
+  contactUs
+  helpCentre
+  lang
+  privacyPolicy
+  signoff1
+  signoff2
+  termsConditions
+  title
+>
 <div lang="${lang}" style="box-sizing: border-box; font-size: 1rem; line-height: 1.625">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="white" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div
@@ -729,14 +740,14 @@
                                             text-align: left;
                                           "
                                         >
-                                          ${sincerely}<br
+                                          ${signoff1}<br
                                             style="
                                               box-sizing: border-box;
                                               font-size: 1rem;
                                               line-height: 1.625;
                                             "
                                           />
-                                          OHCRN Team
+                                          ${signoff2}
                                         </div>
                                       </td>
                                     </tr>
@@ -757,7 +768,11 @@
             <!-- FOOTER ICONS -->
             <@footerIcons.emailFooterIcons aboutOhcrn=aboutOhcrn contactUs=contactUs helpCentre=helpCentre />   
             <!-- LEGAL -->
-            <@footerLegal.emailFooterLegal />
+            <@footerLegal.emailFooterLegal
+              allRightsReserved=allRightsReserved
+              privacyPolicy=privacyPolicy
+              termsConditions=termsConditions
+            />
           </td>
         </tr>
       </tbody>
@@ -769,14 +784,37 @@
 
 <#--  ENGLISH BODY  -->
 <#macro emailBody_en title>
-  <@emailBody aboutOhcrn=msg("aboutOhcrn_en") contactUs=msg("contactUs_en") helpCentre=msg("helpCentre_en") lang="en" sincerely=msg("sincerely_en") title=title>
+  <@emailBody
+    aboutOhcrn=msg("aboutOhcrn_en")
+    allRightsReserved=msg("allRightsReserved_en")
+    contactUs=msg("contactUs_en")
+    helpCentre=msg("helpCentre_en")
+    lang="en"
+    privacyPolicy=msg("privacyPolicy_en")
+    signoff1=msg("signoff1_en")
+    signoff2=msg("signoff2_en")
+    termsConditions=msg("termsConditions_en")
+    title=title
+    title=title
+  >
     <#nested>
   </@emailBody>
 </#macro>
 
 <#--  FRENCH BODY  -->
 <#macro emailBody_fr title>
-  <@emailBody aboutOhcrn=msg("aboutOhcrn_fr") contactUs=msg("contactUs_fr") helpCentre=msg("helpCentre_fr") lang="fr" sincerely=msg("sincerely_fr") title=title>
+  <@emailBody
+    aboutOhcrn=msg("aboutOhcrn_fr")
+    allRightsReserved=msg("allRightsReserved_fr")
+    contactUs=msg("contactUs_fr")
+    helpCentre=msg("helpCentre_fr")
+    lang="fr"
+    privacyPolicy=msg("privacyPolicy_fr")
+    signoff1=msg("signoff1_fr")
+    signoff2=msg("signoff2_fr")
+    termsConditions=msg("termsConditions_fr")
+    title=title
+  >
     <#nested>
   </@emailBody>
 </#macro>
