@@ -1,6 +1,6 @@
 <#-- FOOTER - about, help, and contact icons -->
 
-<#macro emailFooterIcons contactUs helpCentre>
+<#macro emailFooterIcons aboutOhcrn contactUs helpCentre>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 <div
   style="
@@ -215,7 +215,7 @@
                               "
                             >
                               <a
-                                href
+                                href="${properties.aboutOhcrnUrl}"
                                 target="_blank"
                                 style="
                                   box-sizing: border-box;
@@ -225,7 +225,7 @@
                                   line-height: 1.625;
                                   font-size: 0.875rem;
                                 "
-                                >About OHCRN</a
+                                >${aboutOhcrn}</a
                               >
                             </div>
                           </td>
@@ -409,7 +409,7 @@
                               "
                             >
                               <a
-                                href
+                                href="${properties.helpCentreUrl}"
                                 target="_blank"
                                 style="
                                   box-sizing: border-box;
@@ -419,7 +419,7 @@
                                   line-height: 1.625;
                                   font-size: 0.875rem;
                                 "
-                                >TESTING ${helpCentre}</a
+                                >${helpCentre}</a
                               >
                             </div>
                           </td>
@@ -603,7 +603,7 @@
                               "
                             >
                               <a
-                                href
+                                href="${properties.contactUsUrl}"
                                 target="_blank"
                                 style="
                                   box-sizing: border-box;

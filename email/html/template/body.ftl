@@ -1,9 +1,8 @@
 <#import "footerIcons.ftl" as footerIcons>
 <#import "footerLegal.ftl" as footerLegal>
 
-<#-- repeat this section for each language -->
-
-<#macro emailBody title lang helpCentre="help" contactUs="contact" sincerely="sincerely">
+<#--  GENERIC BODY - repeat for each language  -->
+<#macro emailBody aboutOhcrn contactUs helpCentre lang sincerely title>
 <div lang="${lang}" style="box-sizing: border-box; font-size: 1rem; line-height: 1.625">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="white" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div
@@ -756,9 +755,9 @@
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
             <!-- FOOTER ICONS -->
-            <#--  <@footerIcons.emailFooterIcons contactUs=contactUs helpCentre=helpCentre />     -->
+            <@footerIcons.emailFooterIcons aboutOhcrn=aboutOhcrn contactUs=contactUs helpCentre=helpCentre />   
             <!-- LEGAL -->
-            <#--  <@footerLegal.emailFooterLegal />  -->
+            <@footerLegal.emailFooterLegal />
           </td>
         </tr>
       </tbody>
@@ -767,15 +766,17 @@
   <!--[if mso | IE]></td></tr></table><![endif]-->
 </div>
 </#macro>
-<#--  
+
+<#--  ENGLISH BODY  -->
 <#macro emailBody_en title>
-  <@emailBody contactUs=msg(contactUs_en)> helpCentre=msg(helpCentre_en) lang="en" sincerely=msg(sincerely_en) title=title>
+  <@emailBody aboutOhcrn=msg("aboutOhcrn_en") contactUs=msg("contactUs_en") helpCentre=msg("helpCentre_en") lang="en" sincerely=msg("sincerely_en") title=title>
     <#nested>
   </@emailBody>
 </#macro>
 
+<#--  FRENCH BODY  -->
 <#macro emailBody_fr title>
-  <@emailBody contactUs=msg(contactUs_fr)> helpCentre=msg(helpCentre_fr) lang="fr" sincerely=msg(sincerely_fr) title=title>
+  <@emailBody aboutOhcrn=msg("aboutOhcrn_fr") contactUs=msg("contactUs_fr") helpCentre=msg("helpCentre_fr") lang="fr" sincerely=msg("sincerely_fr") title=title>
     <#nested>
   </@emailBody>
-</#macro>  -->
+</#macro>

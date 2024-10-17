@@ -1,7 +1,7 @@
-<#import "style.ftl" as style>
 <#import "languageNotice.ftl" as languageNotice>
+<#import "style.ftl" as style>
 
-<#macro emailLayout title="">
+<#macro emailLayout title>
 <!DOCTYPE html>
 <html
   xmlns="http://www.w3.org/1999/xhtml"
@@ -22,7 +22,6 @@
       line-height: 1.625;
     "
   >
-  hello testing 10:48am
     <div
       style="
         box-sizing: border-box;
@@ -31,8 +30,7 @@
         line-height: 1.625;
       "
     >
-      <@languageNotice.emailLanguageNotice />                           
-
+      <@languageNotice.emailLanguageNotice />
       <#nested>
     </div>
   </body>
