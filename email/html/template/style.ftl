@@ -1,3 +1,5 @@
+<#--  meta & style tags from the header  -->
+
 <#macro emailStyle>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />

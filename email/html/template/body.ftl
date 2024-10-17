@@ -3,7 +3,7 @@
 
 <#-- repeat this section for each language -->
 
-<#macro emailBody title="TITLE" lang="en" helpCentre="help" contactUs="contact" sincerely="sincerely">
+<#macro emailBody title lang helpCentre="help" contactUs="contact" sincerely="sincerely">
 <div lang="${lang}" style="box-sizing: border-box; font-size: 1rem; line-height: 1.625">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="white" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div
@@ -756,9 +756,9 @@
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
             <!-- FOOTER ICONS -->
-            <@footerIcons.emailFooterIcons contactUs=contactUs helpCentre=helpCentre />   
+            <#--  <@footerIcons.emailFooterIcons contactUs=contactUs helpCentre=helpCentre />     -->
             <!-- LEGAL -->
-            <@footerLegal.emailFooterLegal />
+            <#--  <@footerLegal.emailFooterLegal />  -->
           </td>
         </tr>
       </tbody>
@@ -767,7 +767,6 @@
   <!--[if mso | IE]></td></tr></table><![endif]-->
 </div>
 </#macro>
-
 <#--  
 <#macro emailBody_en title>
   <@emailBody contactUs=msg(contactUs_en)> helpCentre=msg(helpCentre_en) lang="en" sincerely=msg(sincerely_en) title=title>

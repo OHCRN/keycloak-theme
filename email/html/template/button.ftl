@@ -1,4 +1,4 @@
-<#-- large, left-aligned green button  -->
+<#-- BODY - large, left-aligned green button  -->
 
 <#macro emailButton link>
 <tr

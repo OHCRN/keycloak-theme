@@ -1,4 +1,5 @@
 <#--  "french follows english" notice at top of email  -->
+
 <#macro emailLanguageNotice>
 <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="white" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div

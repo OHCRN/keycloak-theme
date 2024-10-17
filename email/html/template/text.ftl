@@ -1,4 +1,4 @@
-<#--  paragraph of text  -->
+<#-- BODY - paragraph of text  -->
 <#--  TODO add bold  -->
 
 <#macro emailText bold=false>

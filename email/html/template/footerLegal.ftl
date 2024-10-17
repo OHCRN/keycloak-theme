@@ -1,4 +1,4 @@
-<#-- copyright & terms of service  -->
+<#-- FOOTER - copyright & terms of service  -->
 
 <#macro emailFooterLegal>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->

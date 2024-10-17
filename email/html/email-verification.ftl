@@ -3,9 +3,9 @@
 <#import "template/layout.ftl" as layout>
 <#import "template/text.ftl" as text>
 
-<@layout.emailLayout title="Please verify your email / Vérifiez votre email">
+<@layout.emailLayout title=msg("emailVerificationSubject")>
   <#--  ENGLISH  -->
-  <@body.emailBody title=kcSanitize(msg("emailVer_title_en"))?no_esc>
+  <@body.emailBody lang="en" title=msg("emailVer_title_en")>
     ${kcSanitize(msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
   </@body.emailBody>
 

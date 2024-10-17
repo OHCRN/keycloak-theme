@@ -1,4 +1,4 @@
-<#-- link in a text paragraph  -->
+<#-- BODY - link in a text paragraph  -->
 
 <#macro emailLink link="">
 <a
