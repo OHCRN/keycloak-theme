@@ -1,6 +1,5 @@
-<#-- FOOTER - about, help, and contact icons -->
-
-<#macro emailFooterIcon link>
+<#-- FOOTER - reusable icon -->
+<#macro emailFooterIcon icon link>
 <td align="center" class="" style="vertical-align:top;width:180px;" ><![endif]-->
   <div
     class="mj-column-per-30 mj-outlook-group-fix"
@@ -123,7 +122,7 @@
                             <img
                               alt
                               height="auto"
-                              src="${properties.baseImageUrl}${properties.iconContact}"
+                              src="${properties.baseImageUrl}${icon}"
                               style="
                                 box-sizing: border-box;
                                 margin: 0 auto;
@@ -198,6 +197,7 @@
   <!--[if mso | IE]></td>
 </#macro>
 
+<#-- FOOTER - about, help, and contact icons -->
 <#macro emailFooterIcons aboutOhcrn contactUs helpCentre>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
 <div
@@ -243,9 +243,9 @@
         >
           <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr>
           
-          <@emailFooterIcon link=properties.aboutOhcrnUrl>${aboutOhcrn}</@emailFooterIcon>
-          <@emailFooterIcon link=properties.helpCentreUrl>${helpCentre}</@emailFooterIcon>
-          <@emailFooterIcon link=properties.contactUsUrl>${contactUs}</@emailFooterIcon>
+          <@emailFooterIcon icon=properties.iconAbout link=properties.aboutOhcrnUrl>${aboutOhcrn}</@emailFooterIcon>
+          <@emailFooterIcon icon=properties.iconHelp link=properties.helpCentreUrl>${helpCentre}</@emailFooterIcon>
+          <@emailFooterIcon icon=properties.iconContact link=properties.contactUsUrl>${contactUs}</@emailFooterIcon>
 
           </tr></table><![endif]-->
         </td>
