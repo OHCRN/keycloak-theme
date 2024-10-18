@@ -795,7 +795,6 @@
     signoff2=msg("signoff2_en")
     termsConditions=msg("termsConditions_en")
     title=title
-    title=title
   >
     <#nested>
   </@emailBody>

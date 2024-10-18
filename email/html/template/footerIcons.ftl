@@ -1,4 +1,4 @@
-<#-- FOOTER - about, help, and contact icons -->
+<#-- FOOTER ICONS - about, help, and contact icons -->
 
 <#macro emailFooterIcons aboutOhcrn contactUs helpCentre>
 <!--[if mso | IE]><tr><td align="center" class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#231F20" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
@@ -165,7 +165,7 @@
                                     <img
                                       alt
                                       height="auto"
-                                      src="http://localhost:8087/img/ohcrn-email_about.png"
+                                      src="${properties.baseImageUrl}${properties.iconAbout}"
                                       style="
                                         box-sizing: border-box;
                                         margin: 0 auto;
@@ -553,7 +553,7 @@
                                     <img
                                       alt
                                       height="auto"
-                                      src="http://localhost:8087/img/ohcrn-email_contact.png"
+                                      src="${properties.baseImageUrl}${properties.iconContact}"
                                       style="
                                         box-sizing: border-box;
                                         margin: 0 auto;
