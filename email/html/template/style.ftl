@@ -1,4 +1,4 @@
-<#--  meta & style tags from the header  -->
+<#-- LAYOUT - meta & style tags from the header  -->
 
 <#macro emailStyle>
     <!--[if !mso]><!-->

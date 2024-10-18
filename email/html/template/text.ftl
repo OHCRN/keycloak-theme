@@ -1,7 +1,6 @@
 <#-- BODY - paragraph of text  -->
-<#--  TODO add bold  -->
 
-<#macro emailText bold=false>
+<#macro emailText>
 <tr
   style="
     box-sizing: border-box;

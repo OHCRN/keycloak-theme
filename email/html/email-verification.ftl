@@ -3,6 +3,8 @@
 <#import "template/layout.ftl" as layout>
 <#import "template/text.ftl" as text>
 
+<#--  EMAIL - email verification  -->
+
 <@layout.emailLayout title=msg("emailVerificationSubject")>
   <#--  ENGLISH  -->
   <@body.emailBody_en title=msg("emailVer_title_en")>

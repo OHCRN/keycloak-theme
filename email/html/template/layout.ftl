@@ -1,6 +1,8 @@
 <#import "languageNotice.ftl" as languageNotice>
 <#import "style.ftl" as style>
 
+<#--  LAYOUT - wrapper  -->
+
 <#macro emailLayout title>
 <!DOCTYPE html>
 <html

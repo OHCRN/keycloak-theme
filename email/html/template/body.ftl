@@ -1,7 +1,7 @@
 <#import "footerIcons.ftl" as footerIcons>
 <#import "footerLegal.ftl" as footerLegal>
 
-<#--  GENERIC BODY - repeat for each language  -->
+<#--  GENERIC BODY - repeat for each language. see below  -->
 <#macro emailBody 
   aboutOhcrn
   allRightsReserved
