@@ -1,6 +1,6 @@
 <#-- BODY - link in a text paragraph  -->
 
-<#macro emailLink link="">
+<#macro emailLink link>
 <a
   href="${link}"
   target="_blank"

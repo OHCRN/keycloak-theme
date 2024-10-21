@@ -414,7 +414,7 @@
                                                 width="600"
                                               >
                                                 <img
-                                                  alt
+                                                  alt=""
                                                   height="auto"
                                                   src="${properties.baseImageUrl}${properties.bannerVerify}"
                                                   style="

@@ -121,7 +121,7 @@
                             width="180"
                           >
                             <img
-                              alt
+                              alt=""
                               height="auto"
                               src="${properties.baseImageUrl}${icon}"
                               style="
