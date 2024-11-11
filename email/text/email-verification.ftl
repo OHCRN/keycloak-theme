@@ -1,2 +1,2 @@
 <#ftl output_format="plainText">
-  ${msg("emailVerificationBody",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration))}
+  ${msg("languageNotice")}\n\n${msg("emailVer_title_en")}\n\n${msg("emailVer_welcome_en")}\n\n${msg("emailVer_text1_en")}\n\n${msg("emailVer_text2_en")}\n\n${msg("emailVer_buttonText_en")}: ${link}\n\n${msg("emailVer_text3_en")} ${msg("emailVer_textLink_en")} (${properties.ohcrnUrl})\n\n${msg("signoff1_en")}\n${msg("signoff2_en")}\n\n${msg("emailVer_title_fr")}\n\n${msg("emailVer_welcome_fr")}\n\n${msg("emailVer_text1_fr")}\n\n${msg("emailVer_text2_fr")}\n\n${msg("emailVer_buttonText_fr")}: ${link}\n\n${msg("emailVer_text3_fr")} ${msg("emailVer_textLink_fr")} (${properties.ohcrnUrl})\n\n${msg("signoff1_en")}\n${msg("signoff2_en")}
