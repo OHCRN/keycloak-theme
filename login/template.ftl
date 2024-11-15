@@ -39,7 +39,7 @@
     <body class="${properties.kcBodyClass!}">
     <div class="${properties.kcLoginClass!}">
         <div id="kc-header" class="${properties.kcHeaderClass!}">
-            <img class="header-image" src="${url.resourcesPath}/img/oicr-logo.svg" />
+            <img class="header-image" src="${url.resourcesPath}/img/oicr-logo.svg" alt="${msg("headerAltText")}" />
         </div>
         <div class="${properties.kcFormCardClass!}">
             <header class="${properties.kcFormHeaderClass!}">
