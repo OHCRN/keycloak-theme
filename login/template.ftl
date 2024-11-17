@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false>
+<#macro registrationLayout bodyClass="" displayInfo=true displaySmsInfo=true displayMessage=true displayRequiredFields=false>
     <!DOCTYPE html>
     <html class="${properties.kcHtmlClass!}"<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}"</#if>>
 
@@ -77,10 +77,10 @@
                             </div>
                         </div>
                     <#else>
-                        <#if displayInfo>
+                        <#if displaySmsInfo>
                             <div id="kc-info" class="${properties.kcSignUpClass!}">
                                 <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-                                    <#nested "info">
+                                    <#nested "sms-info">
                                 </div>
                             </div>
                         </#if>
@@ -106,7 +106,13 @@
 
                     <#nested "form">
                     <#nested "resend">
-
+                    <#if displayInfo>
+                        <div id="kc-info" class="${properties.kcSignUpClass!}">
+                            <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+                                <#nested "info">
+                            </div>
+                        </div>
+                    </#if>
                     <#if auth?has_content && auth.showTryAnotherWayLink()>
                         <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
                             <div class="${properties.kcFormGroupClass!}">
