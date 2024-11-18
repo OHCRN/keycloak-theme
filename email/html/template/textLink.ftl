@@ -1,8 +1,8 @@
 <#-- BODY - link in a text paragraph  -->
 
-<#macro emailLink link>
+<#macro emailTextLink href>
 <a
-  href="${link}"
+  href="${href}"
   target="_blank"
   rel="nofollow"
   style="

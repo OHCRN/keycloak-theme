@@ -1,6 +1,6 @@
 <#-- BODY - large, left-aligned green button  -->
 
-<#macro emailButton link>
+<#macro emailButton href>
 <tr
   style="
     box-sizing: border-box;
@@ -60,7 +60,7 @@
           valign="middle"
         >
           <a
-            href="${link}"
+            href="${href}"
             style="
               box-sizing: border-box;
               font-family: Montserrat, Arial, sans-serif;
