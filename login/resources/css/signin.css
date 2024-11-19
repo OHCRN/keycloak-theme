@@ -1,118 +1,142 @@
 html,
 .login-page {
-  height: 100%;
+    height: 100%;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");  
+    font-family: "Montserrat";
+    font-style: normal;
+    font-variation-settings: 'wght' 400;
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: url("../img/background.png") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  color: #282A35;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: url("../img/Background-medium.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #282A35;
+    line-height: 1.75rem;
+    @media screen and (max-width: 480px) {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
 }
 
 .form-signin {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
 .form-signin .checkbox {
-  font-weight: 400;
+    font-variation-settings: 'wght' 400;
 }
 
 .form-signin .form-floating:focus-within {
-  z-index: 2;
+    z-index: 2;
 }
 
 .form-signin input[type="password"], .form-signin input[type="text"] {
-  margin-bottom: 10px;
-  font-size: 20px;
-  min-height: 1rem;
-  max-height: 2.5rem;
-  border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    min-height: 1rem;
+    max-height: 2.5rem;
+    border-radius: 0;
+    border: 1px solid #282A35;
+    @media screen and (max-width: 480px) {
+        font-size: 0.75rem;
+        line-height: 1.75rem;
+    }
+}
+
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+    padding: 0 0.5rem;
+}
+
+#kc-header {
+    padding: 40px 40px 20px;
 }
 
 #kc-header-wrapper {
-  font-size: 2.90rem !important;
-  visibility: hidden;
-  padding: 0px 0px 20px;
+    font-size: 2.90rem !important;
+    visibility: hidden;
+    padding: 0px 0px 20px;
 }
 
 #kc-page-title {
-  font-size: calc(1.1rem + 0.75vw);
-  text-align: center;
-  margin-top: 20px;
-  @media screen and (max-width: 480px) {
-    text-align: left;
-    font-size: calc(0.75rem + 0.5vw);
-  }
+    font-size: calc(1.1rem + 0.75vw);
+    text-align: center;
+    @media screen and (max-width: 480px) {
+        font-size: 1.25rem;
+    }
+}
+
+h1#kc-page-title {
+    margin-top: 20px;
 }
 
 #kc-content, #kc-content-wrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #kc-content-wrapper {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .kc-social-gray {
-  color: #282A35;
+    color: #282A35;
 }
 
 .kc-social-section h4 {
-  font-size: calc(1rem + 0.3vw);
+    font-size: calc(1rem + 0.3vw);
 }
 
 #kc-locale {
-  margin-bottom: 5px;
-  @media screen and (max-width: 480px) {
-    top: 10px;
-  }
+    margin-bottom: 5px;
+    @media screen and (max-width: 480px) {
+        top: 10px;
+    }
 }
 
 #kc-locale ul {
-  top: 2px;
+    top: 2px;
 }
 
 #kc-locale-dropdown a {
-  @media screen and (max-width: 480px) {
-    font-size: calc(0.75rem + 0.5vw);
-  }
+    @media screen and (max-width: 480px) {
+        font-size: calc(0.75rem + 0.5vw);
+    }
 }
 
 .button-basic {
-  background-color: #282A35;
-  border-color: #282A35;
-  color: #ffffff;
-  border-radius: 0;
+    background-color: #282A35;
+    border-color: #282A35;
+    color: #ffffff;
+    border-radius: 0;
 }
 
 .button-basic:hover {
-  color: #ffffff;
-  background-color: #616470;
-  border-color: #616470;
+    color: #ffffff;
+    background-color: #616470;
+    border-color: #616470;
 }
 
 .login-card {
     margin: 0 10px 20px;
-    padding: 10px 30px;
+    padding: 0.5rem 2rem 2rem;
     max-width: 100%;
     height: 100%;
     background-color: #ffffff;
     position: relative;
+    @media screen and (max-width: 480px) {
+        margin: 0 20px 20px;
+        padding: 0.5rem 1rem 2rem;
+    }
 }
 
 .login-header {
@@ -122,23 +146,18 @@ body {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
     text-align: center;
-    background-color: transparent;
-    background-position: center;
-    background-image: url("../img/oicr-logo.svg");
-    background-repeat: no-repeat;
     @media screen and (max-width: 480px) {
-      background-position: initial;
-      background-size: contain;
-      margin: 0 10px;
+        background-position: initial;
+        background-size: contain;
+        margin: 0 10px;
     }
 }
 
 .login-info {
-  font-size: 1rem !important;
-  background-color: #ffffff !important;
-  margin: 10px 20px 10px;
-  font-family: inherit;
-  text-align: center;
+    background-color: #ffffff !important;
+    margin: 10px 20px 10px;
+    font-family: inherit;
+    text-align: center;
 }
 
 .locale-section {
@@ -147,38 +166,94 @@ body {
 
 .locale-dropdown {
     a {
-      color: #282A35;
+        color: #282A35;
     }
 }
 
 .form-label {
-    padding: 0px 0px 0px 0px !important;
+    padding: 0 !important;
     position: relative !important;
     font-size: 0.875rem;
+    @media screen and (max-width: 480px) {
+        font-size: 0.75rem;
+    }
 }
 
 .form-control {
-  border-radius: 0;
+    border-radius: 0;
+    height: 33px;
+    min-height: 1rem;
+    max-height: 2.5rem;
 }
 
 a {
-  color: #2C77F6;
-  text-decoration: none;
+    color: #286C77;
+    &:hover {
+        color: #286C77;
+    }
 }
 
 a#kc-current-locale-link::after {
-  content: '';
+    content: '';
 }
 
 
 /* login only */
 #kc-info {
-  margin: 20px -40px 0px;
+    margin: 0px -30px -30px;
 }
 
 /* register only */
 #kc-register-form {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#kc-form-login {
+    margin-bottom: 3rem;
+}
+
+#kc-info-wrapper {
+    font-size: inherit;
+    padding: 5px 35px;
+}
+
+.retry-code {
+    margin-top: 1rem;
+}
+
+#retry-wrapper {
+    margin: 1.5rem 0;
+}
+
+strong {
+    font-variation-settings: 'wght' 700;
+}
+
+#sms-title {
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.sms-instructions {
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 480px) {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+}
+
+.header-image {
+    width: 100%;
+}
+
+p.instruction {
+    margin-top: 10px;
+}
+
+div.alert-warning.pf-c-alert.pf-m-inline.pf-m-warning {
+    line-height: 1.25rem;
 }
