@@ -2,6 +2,7 @@
 <#import "template/button.ftl" as button>
 <#import "template/layout.ftl" as layout>
 <#import "template/text.ftl" as text>
+<#import "template/textLink.ftl" as textLink>
 
 <#--  EMAIL - Update password confirmation -->
 
