@@ -13,7 +13,7 @@
     <@text.emailText>${msg("eventUpdatePassword_text1_en")?no_esc}</@text.emailText>
 		<@text.emailText>
 			${msg("eventUpdatePassword_text2_en")?no_esc} 
-			<@textLink.emailTextLink href=properties.ohcrnInfoEmail>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
+			<@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
 			${msg("eventUpdatePassword_text3_en")?no_esc}
 		</@text.emailText>
   </@body.emailBody_en>
@@ -24,7 +24,7 @@
     <@text.emailText>${msg("eventUpdatePassword_text1_fr")?no_esc}</@text.emailText>
 		<@text.emailText>
 			${msg("eventUpdatePassword_text2_fr")?no_esc}
-			<@textLink.emailTextLink href=properties.ohcrnInfoEmail>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
+			<@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
 			${msg("eventUpdatePassword_text3_fr")?no_esc}
 		</@text.emailText>
   </@body.emailBody_fr>
