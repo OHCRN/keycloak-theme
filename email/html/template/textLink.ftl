@@ -1,7 +1,7 @@
 <#-- BODY - link in a text paragraph  -->
 <#--  `mailto:` can't be added to the target URL. for an email link, add mailto=true  -->
 
-<#macro emailTextLink href mailto>
+<#macro emailTextLink href mailto=false>
 <a
   href="${mailto?then('mailto:','')}${href}"
   target="_blank"
