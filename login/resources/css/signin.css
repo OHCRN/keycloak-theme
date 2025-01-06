@@ -257,3 +257,11 @@ p.instruction {
 div.alert-warning.pf-c-alert.pf-m-inline.pf-m-warning {
     line-height: 1.25rem;
 }
+
+.alert-info {
+    margin-top: 0.75rem;
+}
+
+#logout-sessions {
+    margin-top: 7px;
+}
