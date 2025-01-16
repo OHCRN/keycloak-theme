@@ -211,7 +211,7 @@ a#kc-current-locale-link::after {
 }
 
 #kc-form-login {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 #kc-info-wrapper {
@@ -264,4 +264,12 @@ div.alert-warning.pf-c-alert.pf-m-inline.pf-m-warning {
 
 #logout-sessions {
     margin-top: 7px;
+}
+
+#sms-number-help {
+    display: flex;
+    justify-content: center;
+    span {
+        text-align: center;
+    }
 }
