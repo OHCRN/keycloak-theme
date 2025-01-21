@@ -113,6 +113,9 @@
                             </div>
                         </div>
                     </#if>
+                    <#if displaySmsInfo>
+                        <#nested "sms-help">
+                    </#if>
                     <#if auth?has_content && auth.showTryAnotherWayLink()>
                         <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
                             <div class="${properties.kcFormGroupClass!}">
