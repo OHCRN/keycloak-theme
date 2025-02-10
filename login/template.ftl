@@ -1,6 +1,7 @@
-<#macro registrationLayout bodyClass="" displayInfo=true displaySmsInfo=true displayMessage=true displayRequiredFields=false>
+<#import "footer.ftl" as loginFooter>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false>
     <!DOCTYPE html>
-    <html class="${properties.kcHtmlClass!}"<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}"</#if>>
+    <html class="${properties.kcHtmlClass!}"<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}" dir="${(locale.rtl)?then('rtl','ltr')}"</#if>>
 
     <head>
         <meta charset="utf-8">
@@ -29,11 +30,26 @@
                 <script src="${url.resourcesPath}/${script}" type="text/javascript"></script>
             </#list>
         </#if>
+        <script type="importmap">
+            {
+                "imports": {
+                    "rfc4648": "${url.resourcesCommonPath}/vendor/rfc4648/rfc4648.js"
+                }
+            }
+        </script>
+        <script src="${url.resourcesPath}/js/menu-button-links.js" type="module"></script>
         <#if scripts??>
             <#list scripts as script>
                 <script src="${script}" type="text/javascript"></script>
             </#list>
         </#if>
+        <script type="module">
+            import { startSessionPolling } from "${url.resourcesPath}/js/authChecker.js";
+
+            startSessionPolling(
+            "${url.ssoLoginInOtherTabsUrl?no_esc}"
+            );
+        </script>
     </head>
 
     <body class="${properties.kcBodyClass!}">
@@ -77,13 +93,16 @@
                             </div>
                         </div>
                     <#else>
-                        <#if displaySmsInfo>
-                            <div id="kc-info" class="${properties.kcSignUpClass!}">
-                                <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-                                    <#nested "sms-info">
+                        <#nested "show-username">
+                        <div id="kc-username" class="${properties.kcFormGroupClass!}">
+                            <label id="kc-attempted-username">${auth.attemptedUsername}</label>
+                            <a id="reset-login" href="${url.loginRestartFlowUrl}" aria-label="${msg("restartLoginTooltip")}">
+                                <div class="kc-login-tooltip">
+                                    <i class="${properties.kcResetFlowIcon!}"></i>
+                                    <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
                                 </div>
-                            </div>
-                        </#if>
+                            </a>
+                        </div>
                     </#if>
                 </#if>
             </header>
@@ -104,34 +123,31 @@
                         </div>
                     </#if>
 
-                    <#nested "form">
-                    <#nested "resend">
-                    <#if displayInfo>
-                        <div id="kc-info" class="${properties.kcSignUpClass!}">
-                            <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-                                <#nested "info">
-                            </div>
-                        </div>
-                    </#if>
-                    <#if displaySmsInfo>
-                        <#nested "sms-help">
-                    </#if>
-                    <#if auth?has_content && auth.showTryAnotherWayLink()>
-                        <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
-                            <div class="${properties.kcFormGroupClass!}">
-                                <input type="hidden" name="tryAnotherWay" value="on"/>
-                                <a href="#" id="try-another-way"
-                                   onclick="document.forms['kc-select-try-another-way-form'].submit();return false;">${msg("doTryAnotherWay")}</a>
-                            </div>
-                        </form>
-                    </#if>
+            <#nested "form">
 
+            <#if auth?has_content && auth.showTryAnotherWayLink()>
+                <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
+                    <div class="${properties.kcFormGroupClass!}">
+                        <input type="hidden" name="tryAnotherWay" value="on"/>
+                        <a href="#" id="try-another-way"
+                            onclick="document.forms['kc-select-try-another-way-form'].requestSubmit();return false;">${msg("doTryAnotherWay")}</a>
+                    </div>
+                </form>
+            </#if>
 
-                    <#nested "socialProviders">
+            <#nested "socialProviders">
 
+            <#if displayInfo>
+                <div id="kc-info" class="${properties.kcSignUpClass!}">
+                    <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+                        <#nested "info">
+                    </div>
                 </div>
+            </#if>
             </div>
+        </div>
 
+        <@loginFooter.content/>
         </div>
     </div>
     </body>
