@@ -1,5 +1,5 @@
 <#import "footer.ftl" as loginFooter>
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false>
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displaySmsInfo=true>
     <!DOCTYPE html>
     <html class="${properties.kcHtmlClass!}"<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}" dir="${(locale.rtl)?then('rtl','ltr')}"</#if>>
 
@@ -93,16 +93,13 @@
                             </div>
                         </div>
                     <#else>
-                        <#nested "show-username">
-                        <div id="kc-username" class="${properties.kcFormGroupClass!}">
-                            <label id="kc-attempted-username">${auth.attemptedUsername}</label>
-                            <a id="reset-login" href="${url.loginRestartFlowUrl}" aria-label="${msg("restartLoginTooltip")}">
-                                <div class="kc-login-tooltip">
-                                    <i class="${properties.kcResetFlowIcon!}"></i>
-                                    <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
+                        <#if displaySmsInfo>
+                            <div id="kc-info" class="${properties.kcSignUpClass!}">
+                                <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+                                    <#nested "sms-info">
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </#if>
                     </#if>
                 </#if>
             </header>

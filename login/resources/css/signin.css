@@ -60,7 +60,7 @@ body {
     padding: 0 0.5rem;
 }
 
-.form-floating > .pf-c-input-group > .form-control, .pf-c-input-group > .form-control {
+.form-floating input.form-control {
     height: calc(3.5rem + 2px);
 }
 
@@ -276,6 +276,7 @@ div.alert-warning.pf-c-alert.pf-m-inline.pf-m-warning {
 #sms-number-help {
     display: flex;
     justify-content: center;
+    padding: 0rem 0.5rem;
     span {
         text-align: center;
     }
@@ -286,4 +287,8 @@ button.pf-c-button.pf-m-control  {
     border: 1px solid #282A35;
     padding: 0.5rem 1rem 0.4rem;
     --pf-c-button--after--BorderColor: transparent;
+}
+
+#kc-sms-code-login-form {
+    margin-bottom: 1.5rem;
 }
