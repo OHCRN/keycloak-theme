@@ -283,9 +283,10 @@ div.alert-warning.pf-c-alert.pf-m-inline.pf-m-warning {
 }
 
 button.pf-c-button.pf-m-control  {
-    max-height: fit-content;
     border: 1px solid #282A35;
-    padding: 0.5rem 1rem 0.4rem;
+    min-height: 1rem;
+    max-height: 2.5rem;
+    height: calc(3.5rem + 2px);
     --pf-c-button--after--BorderColor: transparent;
 }
 
