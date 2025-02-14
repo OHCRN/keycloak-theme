@@ -121,6 +121,7 @@
                     </#if>
 
             <#nested "form">
+            <#nested "resend">
 
             <#if auth?has_content && auth.showTryAnotherWayLink()>
                 <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post">
