@@ -137,7 +137,7 @@
                                 font-size: 0.8125rem;
                               "
                             >
-                              &copy; ${properties.copyrightYear} ${allRightsReserved} |
+                              &copy; ${.now?string('yyyy')} ${allRightsReserved} |
                               <a
                                 href="${properties.privacyPolicyUrl}"
                                 target="_blank"
