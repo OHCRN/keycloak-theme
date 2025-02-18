@@ -208,6 +208,9 @@ a#kc-current-locale-link::after {
 /* login only */
 #kc-info {
     margin: 0px -30px -30px;
+    &.login-info-text {
+        margin: 0px -40px;
+    }
 }
 
 /* register only */
