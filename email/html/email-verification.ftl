@@ -15,13 +15,4 @@
     <@button.emailButton href=link>${msg("emailVer_buttonText_en")}</@button.emailButton>
     <@text.emailText>${msg("emailVer_text3_en")} <@textLink.emailTextLink href=properties.ohcrnUrl>${msg("emailVer_textLink_en")}</@textLink.emailTextLink>.</@text.emailText>
   </@body.emailBody_en>
-
-  <#--  FRENCH  -->
-  <@body.emailBody_fr title=msg("emailVer_title_fr")>
-    <@text.emailText><b>${msg("emailVer_welcome_fr")}</b></@text.emailText>
-    <@text.emailText>${msg("emailVer_text1_fr")}</@text.emailText>
-    <@text.emailText>${msg("emailVer_text2_fr")}</@text.emailText>
-    <@button.emailButton href=link>${msg("emailVer_buttonText_fr")}</@button.emailButton>
-    <@text.emailText>${msg("emailVer_text3_fr")} <@textLink.emailTextLink href=properties.ohcrnUrl>${msg("emailVer_textLink_fr")}</@textLink.emailTextLink>.</@text.emailText>
-  </@body.emailBody_fr>
 </@layout.emailLayout>

@@ -799,21 +799,4 @@
     <#nested>
   </@emailBody>
 </#macro>
-
-<#--  FRENCH BODY  -->
-<#macro emailBody_fr title>
-  <@emailBody
-    aboutOhcrn=msg("aboutOhcrn_fr")
-    allRightsReserved=msg("allRightsReserved_fr")
-    contactUs=msg("contactUs_fr")
-    helpCentre=msg("helpCentre_fr")
-    lang="fr"
-    privacyPolicy=msg("privacyPolicy_fr")
-    signoff1=msg("signoff1_fr")
-    signoff2=msg("signoff2_fr")
-    termsConditions=msg("termsConditions_fr")
-    title=title
-  >
-    <#nested>
-  </@emailBody>
 </#macro>

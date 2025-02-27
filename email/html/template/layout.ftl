@@ -32,7 +32,6 @@
         line-height: 1.625;
       "
     >
-      <@languageNotice.emailLanguageNotice />
       <#nested>
     </div>
   </body>
