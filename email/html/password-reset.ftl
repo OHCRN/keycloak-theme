@@ -21,4 +21,21 @@
 			${msg("passwordReset_expiry2_en")}
 		</@text.emailText>
   </@body.emailBody_en>
+
+  <#--  FRENCH  -->
+	<#-- TODO I18N -->
+  <#-- <@body.emailBody_fr title=msg("passwordReset_title_fr")>
+    <@text.emailText><b>${msg("passwordReset_welcome_fr")}</b></@text.emailText>
+    <@text.emailText>
+			${msg("passwordReset_text1_fr")?no_esc}
+			<br>
+			${msg("passwordReset_text2_fr")?no_esc}
+		</@text.emailText>
+    <@button.emailButton href=link>${msg("passwordReset_button_fr")}</@button.emailButton>
+    <@text.emailText>
+			${msg("passwordReset_expiry1_fr", linkExpirationFormatter(linkExpiration))?no_esc}
+			<br>
+			${msg("passwordReset_expiry2_fr")}
+		</@text.emailText>
+  </@body.emailBody_fr> -->
 </@layout.emailLayout>
