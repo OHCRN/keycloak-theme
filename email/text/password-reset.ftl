@@ -1,6 +1,7 @@
 <#ftl output_format="plainText">
-${msg("languageNotice")}
-${msg("text_line")}
+<#-- TODO I18N -->
+<#-- ${msg("languageNotice")}
+${msg("text_line")} -->
 ${msg("passwordReset_title_en")}
 
 ${msg("passwordReset_welcome_en")}
@@ -15,7 +16,9 @@ ${msg("passwordReset_expiry2_en")}
 
 ${msg("signoff1_en")}
 ${msg("signoff2_en")}
-${msg("text_line")}
+
+<#-- TODO I18N -->
+<#-- ${msg("text_line")}
 ${msg("passwordReset_title_fr")}
 
 ${msg("passwordReset_welcome_fr")}
@@ -30,3 +33,4 @@ ${msg("passwordReset_expiry2_fr")}
 
 ${msg("signoff1_fr")}
 ${msg("signoff2_fr")}
+-->

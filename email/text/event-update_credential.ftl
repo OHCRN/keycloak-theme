@@ -1,6 +1,7 @@
 <#ftl output_format="plainText">
-${msg("languageNotice")}
-${msg("text_line")}
+<#-- TODO I18N -->
+<#-- ${msg("languageNotice")}
+${msg("text_line")} -->
 ${msg("eventUpdatePassword_title_en")}
 
 ${msg("eventUpdatePassword_welcome_en")}
@@ -11,7 +12,9 @@ ${msg("eventUpdatePassword_text2_en")} ${properties.ohcrnInfoEmail} ${msg("event
 
 ${msg("signoff1_en")}
 ${msg("signoff2_en")}
-${msg("text_line")}
+
+<#-- TODO I18N -->
+<#-- ${msg("text_line")}
 ${msg("eventUpdatePassword_title_fr")}
 
 ${msg("eventUpdatePassword_welcome_fr")}
@@ -22,3 +25,4 @@ ${msg("eventUpdatePassword_text2_fr")} ${properties.ohcrnInfoEmail} ${msg("event
 
 ${msg("signoff1_fr")}
 ${msg("signoff2_fr")}
+-->

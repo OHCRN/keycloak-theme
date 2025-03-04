@@ -1,6 +1,7 @@
 <#ftl output_format="plainText">
-${msg("languageNotice")}
-${msg("text_line")}
+<#-- TODO I18N -->
+<#-- ${msg("languageNotice")}
+${msg("text_line")} -->
 ${msg("eventLoginError_title_en")}
 
 ${msg("eventLoginError_welcome_en")}
@@ -12,7 +13,9 @@ ${msg("eventLoginError_text3_en")} ${properties.ohcrnInfoEmail} ${msg("eventLogi
 ${msg("signoff1_en")}
 ${msg("signoff2_en")}
 ${msg("text_line")}
-${msg("eventLoginError_title_fr")}
+
+<#-- TODO I18N -->
+<#-- ${msg("eventLoginError_title_fr")}
 
 ${msg("eventLoginError_welcome_fr")}
 
@@ -22,3 +25,4 @@ ${msg("eventLoginError_text3_fr")} ${properties.ohcrnInfoEmail} ${msg("eventLogi
 
 ${msg("signoff1_fr")}
 ${msg("signoff2_fr")}
+-->
