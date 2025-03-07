@@ -19,14 +19,15 @@
   </@body.emailBody_en>
 
   <#--  FRENCH  -->
-  <#-- TODO I18N -->
-  <#-- <@body.emailBody_fr title=msg("eventUpdatePassword_title_fr")>
-    <@text.emailText><b>${msg("eventUpdatePassword_welcome_fr")}</b></@text.emailText>
-    <@text.emailText>${msg("eventUpdatePassword_text1_fr")?no_esc}</@text.emailText>
-		<@text.emailText>
-			${msg("eventUpdatePassword_text2_fr")?no_esc}
-			<@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
-			${msg("eventUpdatePassword_text3_fr")?no_esc}
-		</@text.emailText>
-  </@body.emailBody_fr> -->
+  <#if properties.frenchEnabled == "true">
+    <@body.emailBody_fr title=msg("eventUpdatePassword_title_fr")>
+      <@text.emailText><b>${msg("eventUpdatePassword_welcome_fr")}</b></@text.emailText>
+      <@text.emailText>${msg("eventUpdatePassword_text1_fr")?no_esc}</@text.emailText>
+      <@text.emailText>
+        ${msg("eventUpdatePassword_text2_fr")?no_esc}
+        <@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
+        ${msg("eventUpdatePassword_text3_fr")?no_esc}
+      </@text.emailText>
+    </@body.emailBody_fr>
+  </#if>
 </@layout.emailLayout>

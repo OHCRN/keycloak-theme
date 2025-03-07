@@ -801,8 +801,7 @@
 </#macro>
 
 <#--  FRENCH BODY  -->
-<#-- TODO I18N -->
-<#-- <#macro emailBody_fr title>
+<#macro emailBody_fr title>
   <@emailBody
     aboutOhcrn=msg("aboutOhcrn_fr")
     allRightsReserved=msg("allRightsReserved_fr")
@@ -817,4 +816,4 @@
   >
     <#nested>
   </@emailBody>
-</#macro> -->
+</#macro>

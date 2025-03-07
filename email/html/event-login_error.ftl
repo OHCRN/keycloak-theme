@@ -23,17 +23,17 @@
   </@body.emailBody_en>
 
   <#--  FRENCH  -->
-  <#-- TODO I18N -->
-  <#-- <#setting locale="en_fr">
-  <@body.emailBody_fr title=msg("eventLoginError_title_fr")>
-    <@text.emailText><b>${msg("eventLoginError_welcome_fr")}</b></@text.emailText>
-    <@text.emailText>
-    ${kcSanitize(msg("eventLoginError_text1_fr"))?no_esc} ${event.date?string["${properties.loginErrorDateFormat}, 'à' ${properties.loginErrorTimeFormat}"]}${kcSanitize(msg("eventLoginError_text2_fr"))?no_esc}
-    </@text.emailText>
-		<@text.emailText>
-			${msg("eventLoginError_text3_fr")?no_esc}
-			<@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
-			${msg("eventLoginError_text4_fr")?no_esc}
-		</@text.emailText>
-  </@body.emailBody_fr> -->
+  <#if properties.frenchEnabled == "true">
+    <@body.emailBody_fr title=msg("eventLoginError_title_fr")>
+      <@text.emailText><b>${msg("eventLoginError_welcome_fr")}</b></@text.emailText>
+      <@text.emailText>
+      ${kcSanitize(msg("eventLoginError_text1_fr"))?no_esc} ${event.date?string["${properties.loginErrorDateFormat}, 'à' ${properties.loginErrorTimeFormat}"]}${kcSanitize(msg("eventLoginError_text2_fr"))?no_esc}
+      </@text.emailText>
+      <@text.emailText>
+        ${msg("eventLoginError_text3_fr")?no_esc}
+        <@textLink.emailTextLink href=properties.ohcrnInfoEmail mailto=true>${properties.ohcrnInfoEmail}</@textLink.emailTextLink>
+        ${msg("eventLoginError_text4_fr")?no_esc}
+      </@text.emailText>
+    </@body.emailBody_fr>
+  </#if>
 </@layout.emailLayout>
