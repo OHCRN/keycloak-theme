@@ -32,7 +32,9 @@
         line-height: 1.625;
       "
     >
-      <@languageNotice.emailLanguageNotice />
+      <#if properties.frenchEnabled == "true">
+        <@languageNotice.emailLanguageNotice />
+      </#if>
       <#nested>
     </div>
   </body>

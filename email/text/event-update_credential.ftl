@@ -1,6 +1,8 @@
 <#ftl output_format="plainText">
-${msg("languageNotice")}
-${msg("text_line")}
+<#if properties.frenchEnabled == "true">
+  ${msg("languageNotice")}
+  ${msg("text_line")}
+</#if>
 ${msg("eventUpdatePassword_title_en")}
 
 ${msg("eventUpdatePassword_welcome_en")}
@@ -11,14 +13,17 @@ ${msg("eventUpdatePassword_text2_en")} ${properties.ohcrnInfoEmail} ${msg("event
 
 ${msg("signoff1_en")}
 ${msg("signoff2_en")}
-${msg("text_line")}
-${msg("eventUpdatePassword_title_fr")}
 
-${msg("eventUpdatePassword_welcome_fr")}
+<#if properties.frenchEnabled == "true">
+  ${msg("text_line")}
+  ${msg("eventUpdatePassword_title_fr")}
 
-${msg("eventUpdatePassword_text1_fr")}
+  ${msg("eventUpdatePassword_welcome_fr")}
 
-${msg("eventUpdatePassword_text2_fr")} ${properties.ohcrnInfoEmail} ${msg("eventUpdatePassword_text3_fr")}
+  ${msg("eventUpdatePassword_text1_fr")}
 
-${msg("signoff1_fr")}
-${msg("signoff2_fr")}
+  ${msg("eventUpdatePassword_text2_fr")} ${properties.ohcrnInfoEmail} ${msg("eventUpdatePassword_text3_fr")}
+
+  ${msg("signoff1_fr")}
+  ${msg("signoff2_fr")}
+</#if>
