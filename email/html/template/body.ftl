@@ -104,7 +104,7 @@
                         class="mj-column-per-100 mj-outlook-group-fix logo-wrapper"
                         style="
                           box-sizing: border-box;
-                          padding: 1.25rem 0 0.75rem;
+                          padding-bottom: 1rem;
                           text-align: left;
                           direction: ltr;
                           display: inline-block;
@@ -232,8 +232,8 @@
                                                     text-decoration: none;
                                                     font-size: 1rem;
                                                     line-height: 1.625;
-                                                    width: 18.75rem;
-                                                    height: 4.5rem;
+                                                    width: auto;
+                                                    height: 5rem;
                                                   "
                                                   width="600"
                                                 />
