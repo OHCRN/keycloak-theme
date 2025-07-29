@@ -293,6 +293,22 @@ button.pf-c-button.pf-m-control  {
     --pf-c-button--after--BorderColor: transparent;
 }
 
-#kc-sms-code-login-form {
-    margin-bottom: 1.5rem;
+#retry-wrapper {
+  margin-bottom: 1.5rem;
+  padding-left: 0.2rem;
+  text-align: start;
+
+  input.w-100.btn.btn-lg.button-basic.pf-m-primary.pf-m-block.btn-lg {
+    color: #286C77;
+    background-color: transparent;
+    border: 0;
+    border-style: none;
+    box-shadow: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-align: start;
+    padding &:hover {
+      color: #286C77;
+    }
+  }
 }
