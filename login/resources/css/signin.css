@@ -312,3 +312,7 @@ button.pf-c-button.pf-m-control  {
     }
   }
 }
+
+.instruction.verify {
+  text-align: center;
+}
