@@ -59,6 +59,17 @@
                 </div>
             </div>
 
+            <div class="password-requirements">
+                <h4>Password must have:</h4>
+                <ul>
+                    <li>At least one lowercase</li>
+                    <li>At least one uppercase</li>
+                    <li>At least 15 characters</li>
+                    <li>At least one number</li>
+                    <li>At least one special character</li>
+                </ul>
+            </div>
+
             <div class="${properties.kcFormGroupClass!}">
                 <@passwordCommons.logoutOtherSessions/>
 
