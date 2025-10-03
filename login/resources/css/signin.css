@@ -313,6 +313,10 @@ button.pf-c-button.pf-m-control  {
   }
 }
 
+.instruction.verify {
+  text-align: center;
+}
+
 .password-requirements {
   margin: 1rem 0;
   padding: 0;
