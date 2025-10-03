@@ -316,3 +316,43 @@ button.pf-c-button.pf-m-control  {
 .instruction.verify {
   text-align: center;
 }
+
+.password-requirements {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.password-requirements h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #282A35;
+  margin: 0 0 0.5rem 1.25rem;
+  @media screen and (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}
+
+.password-requirements ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.password-requirements li {
+  font-size: 0.8rem;
+  margin: -0.25rem 1.75rem;
+  color: #282A35;
+  padding-left: 1rem;
+  position: relative;
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+.password-requirements li::before {
+  content: "•";
+  color: #282A35;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
