@@ -317,6 +317,10 @@ button.pf-c-button.pf-m-control  {
   text-align: center;
 }
 
+.instruction.resend-help {
+  padding: 0 2rem;
+}
+
 .password-requirements {
   margin: 1rem 0;
   padding: 0;
